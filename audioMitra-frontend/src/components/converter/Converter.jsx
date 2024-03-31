@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
-import Stage1_1UploadImage from "./Stage1_1UploadImage";
-import Stage2_2TextView from "./Stage2_2TextView";
+import Stage11UploadImage from "./Stage11UploadImage.jsx";
+import Stage22TextView from "./Stage22TextView.jsx";
 import Stage3AudioPlayer from "./Stage3AudioPlayer";
 
 import axios from "axios";
@@ -44,8 +44,7 @@ const Converter = () => {
 
   return (
     <>
-      <Stage1_1UploadImage setImgListName={setImgListName} setTextStatus={setTextStatus} />
-
+      <Stage11UploadImage setImgListName={setImgListName} setTextStatus={setTextStatus} />
       <div className="container flex flex-wrap mt-5 border-t-2 border-orange-200">
         <h1 className="text-3xl text-center h-10 rounded-full text-slate-800 bg-orange-200 font-bold border border-orange-200 -ml-5 w-10 border-t-0">
           2
@@ -55,11 +54,11 @@ const Converter = () => {
       {textStatus === "True" ? (
         <div>
           <div className="w-[500px] mx-auto text-center">
-            <Stage2_2TextView editedText={editedText} setEditedText={setEditedText} />
+            <Stage22TextView editedText={editedText} setEditedText={setEditedText} />
           </div>
         </div>
       ) : (
-        <Stage2_2TextView
+        <Stage22TextView
           imgListName={imgListName}
           editedText={editedText}
           setEditedText={setEditedText}

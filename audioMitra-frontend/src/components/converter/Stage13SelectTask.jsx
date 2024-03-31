@@ -1,7 +1,7 @@
 import TTSEngine from "./EngineTTS";
 import OCREngine from "./EngineOCR";
 
-const Stage1_3SelectTask = ({
+const Stage13SelectTask = ({
   languageOCR,
   handleLanguageOCR,
   selectedFileType,
@@ -32,4 +32,4 @@ const Stage1_3SelectTask = ({
   );
 };
 
-export default Stage1_3SelectTask;
+export default Stage13SelectTask;

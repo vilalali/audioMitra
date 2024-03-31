@@ -6,7 +6,7 @@ import ZoomWrapper from "../zoom/ZoomWrapper";
 import TextView from "./Stage2_2TextView";
 import Download from "../Download";
 
-const Stage2_1ImageView = ({ imgListName, editedText, setEditedText }) => {
+const Stage21ImageView = ({ imgListName, editedText, setEditedText }) => {
   const { API_URL } = useContext(GlobalContext);
   const [selectedImage, setSelectedImage] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -137,4 +137,4 @@ const Stage2_1ImageView = ({ imgListName, editedText, setEditedText }) => {
   );
 };
 
-export default Stage2_1ImageView;
+export default Stage21ImageView;

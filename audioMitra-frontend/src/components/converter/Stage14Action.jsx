@@ -1,14 +1,14 @@
 import { useState, useContext } from "react";
 import axios from "axios";
 import Stage1_1UploadImage from "./Stage1_1UploadImage";
-import Stage1_2SourceLanguage from "./Stage1_2SourceLanguage";
-import Stage1_3SelectTask from "./Stage1_3SelectTask";
+import Stage1_2SourceLanguage from "./Stage12SourceLanguage";
+import Stage1_3SelectTask from "./Stage13SelectTask";
 
 import { GlobalContext } from "../../context/GlobalContext";
 import IconsSubmit from "../IconsSubmit";
 import Popup from "../../popup/Popup";
 
-const Stage1_4Action = ({ setImgListName, setTextStatus }) => {
+const Stage14Action = ({ setImgListName, setTextStatus }) => {
   const { API_URL } = useContext(GlobalContext);
   const [isLoading, setIsLoading] = useState(false);
   const [selectedFileType, setSelectedFileType] = useState("text");
@@ -163,4 +163,4 @@ const Stage1_4Action = ({ setImgListName, setTextStatus }) => {
   );
 };
 
-export default Stage1_4Action;
+export default Stage14Action;

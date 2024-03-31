@@ -1,6 +1,6 @@
 import { IndianLanguages } from "./configConstants";
 
-const Stage1_2SourceLanguage = ({ selectedLanguage, handleLanguageChange }) => {
+const Stage12SourceLanguage = ({ selectedLanguage, handleLanguageChange }) => {
   return (
     <>
       <div className="bg-orange-200 font-bold py-2 pl-4 mb-2">
@@ -29,4 +29,4 @@ const Stage1_2SourceLanguage = ({ selectedLanguage, handleLanguageChange }) => {
   );
 };
 
-export default Stage1_2SourceLanguage;
+export default Stage12SourceLanguage;

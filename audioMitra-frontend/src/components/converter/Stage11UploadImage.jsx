@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Stage1_1UploadImage = ({
+const Stage11UploadImage = ({
   selectedFile,
   selectedFileType,
   setSelectedFileType,
@@ -73,4 +73,4 @@ const Stage1_1UploadImage = ({
   );
 };
 
-export default Stage1_1UploadImage;
+export default Stage11UploadImage;

@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 
-const Stage2_2TextView = ({ setEditedText, editedText }) => {
+const Stage22TextView = ({ setEditedText, editedText }) => {
   const textareaRef = useRef(null);
 
   useEffect(() => {
@@ -26,4 +26,4 @@ const Stage2_2TextView = ({ setEditedText, editedText }) => {
   );
 };
 
-export default Stage2_2TextView;
+export default Stage22TextView;
