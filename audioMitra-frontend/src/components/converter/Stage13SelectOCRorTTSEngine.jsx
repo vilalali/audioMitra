@@ -1,7 +1,7 @@
 import TTSEngine from "./EngineTTS";
 import OCREngine from "./EngineOCR";
 
-const Stage13SelectTask = ({
+const Stage13SelectOCRorTTSEngine = ({
   languageOCR,
   handleLanguageOCR,
   selectedFileType,
@@ -10,7 +10,9 @@ const Stage13SelectTask = ({
 }) => {
   return (
     <>
-      <div className="bg-orange-200 font-bold py-2 pl-4 mb-2">1.3 Task</div>
+      <div className="bg-orange-200 font-bold py-2 pl-4 mb-2">
+        1.3 Select OCR or TTS Engine
+      </div>
       {selectedFileType === "image" ? (
         <div>
           <OCREngine
@@ -32,4 +34,4 @@ const Stage13SelectTask = ({
   );
 };
 
-export default Stage13SelectTask;
+export default Stage13SelectOCRorTTSEngine;

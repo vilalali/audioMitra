@@ -1,6 +1,6 @@
 import { OCREngineName } from "./configConstants";
 
-const EngineOCR = ({ languageOCR, handleLanguageOCR }) => {
+const OCREngine = ({ languageOCR, handleLanguageOCR }) => {
   return (
     <>
       <div>
@@ -26,4 +26,4 @@ const EngineOCR = ({ languageOCR, handleLanguageOCR }) => {
   );
 };
 
-export default EngineOCR;
+export default OCREngine;

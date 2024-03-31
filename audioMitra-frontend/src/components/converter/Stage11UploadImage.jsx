@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Stage11UploadImage = ({
+const Stage12UploadImage = ({
   selectedFile,
   selectedFileType,
   setSelectedFileType,
@@ -9,7 +9,7 @@ const Stage11UploadImage = ({
   return (
     <>
       <div className="bg-orange-200 font-bold py-2 pl-4 mb-2">
-        1.1 Select Image or Text
+        1.1 Browse Image or Text
       </div>
       <div>
         <div>
@@ -20,11 +20,7 @@ const Stage11UploadImage = ({
             name="TextType"
             value="text"
             checked={selectedFileType === "text"}
-            onChange={() => {
-              console.log(typeof setSelectedFileType);
-              console.log("Setting selected file type to text");
-              setSelectedFileType("text");
-            }}
+            onChange={() => setSelectedFileType("text")}
           />
           <label htmlFor="text">Text</label>
         </div>
@@ -36,11 +32,7 @@ const Stage11UploadImage = ({
             name="fileType"
             value="image"
             checked={selectedFileType === "image"}
-            onChange={() => {
-              console.log(typeof setSelectedFileType);
-              console.log("Setting selected file type to image");
-              setSelectedFileType("image");
-            }}
+            onChange={() => setSelectedFileType("image")}
           />
           <label htmlFor="imageHTML">Image</label>
         </div>
@@ -73,4 +65,4 @@ const Stage11UploadImage = ({
   );
 };
 
-export default Stage11UploadImage;
+export default Stage12UploadImage;

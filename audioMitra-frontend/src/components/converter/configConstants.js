@@ -1,25 +1,5 @@
-export const IndianLanguages = [
-    'English',
-    'Hindi',
-    'Urdu',
-    'Telugu',
-    'Tamil',
-    'Bengali',
-    'Malayalam',
-    'Kannada',
-    'Gujarati',
-    'Punjabi',
-    'Marathi',
-];
+export const IndianLanguages = ["English", "Hindi", "Urdu", "Telugu"];
 
-export const OCREngineName = [
-    'IIITH',
-    'EBS-tesseract-ocr',
-    'Bhashini'
-];
+export const OCREngineName = ["Tesseract-OCR", "Bhashini-OCR", "EBS-OCR"];
 
-export const TTSEngineName = [
-    'Bhashini',
-    'C1',
-    'C2'
-];
+export const TTSEngineName = ["Bhashini-TTS", "Ebs-TTS"];

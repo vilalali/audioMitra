@@ -10,7 +10,7 @@ const Nav = () => {
   return (
     <>
       <header
-        className="border-b border-gray-300 py-1 sticky self-start"
+        className="border-b border-gray-300 py-1 sticky self-start mb-3"
         style={{
           top: 0,
           left: 0,
@@ -46,7 +46,7 @@ const Nav = () => {
               </li>
               <li
                 className={`lg:px-5 py-2 hover:text-blue-500 font-semibold ${
-                  location.pathname === "/dashboard" ? "text-green-700" : ""
+                  location.pathname === "/converter" ? "text-green-700" : ""
                 }`}
               >
                 <Link to="/converter">Converter</Link>

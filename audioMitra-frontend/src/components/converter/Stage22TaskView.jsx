@@ -1,19 +1,15 @@
-import { useState, useContext } from "react";
-import { GlobalContext } from "../../context/GlobalContext";
+import { useState } from "react";
+import { API_URL } from "../../cred";
 import axios from "axios";
-import Popup from "../../popup/Popup";
+import Stage21TextView from "./Stage21TextView";
 import ZoomWrapper from "../zoom/ZoomWrapper";
-import TextView from "./Stage2_2TextView";
-import Download from "../Download";
+import Download from "../styled/Download";
 
-const Stage21ImageView = ({ imgListName, editedText, setEditedText }) => {
-  const { API_URL } = useContext(GlobalContext);
+const Stage22TaskView = ({ imgListName, editedText, setEditedText }) => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  // eslint-disable-next-line
-  const [message, setMessage] = useState("");
-  const [alertMessage, setAlertMessage] = useState(false);
   const [extractedText, setExtractedText] = useState("");
+
   const handleImageClick = (clickedImage) => {
     setSelectedImage(clickedImage);
   };
@@ -24,9 +20,7 @@ const Stage21ImageView = ({ imgListName, editedText, setEditedText }) => {
     if (selectedImage) {
       const formData = new FormData();
       formData.append("file", selectedImage);
-
       setIsLoading(true);
-
       try {
         const response = await axios.post(
           `${API_URL}/api/extractText`,
@@ -50,16 +44,10 @@ const Stage21ImageView = ({ imgListName, editedText, setEditedText }) => {
       }
     }
   };
-
   const handleSaveClick = () => {};
 
   return (
     <>
-      <div>
-        {alertMessage ? (
-          <Popup setOpenModal={setAlertMessage} message={message} />
-        ) : null}
-      </div>
       {imgListName.length > 0 ? (
         <div className="border-orange-300 border -mt-10 ml-20">
           <div
@@ -127,7 +115,10 @@ const Stage21ImageView = ({ imgListName, editedText, setEditedText }) => {
               </button>
               <Download />
             </div>
-            <TextView editedText={editedText} setEditedText={setEditedText} />
+            <Stage21TextView
+              editedText={editedText}
+              setEditedText={setEditedText}
+            />
           </div>
         ) : (
           ""
@@ -137,4 +128,4 @@ const Stage21ImageView = ({ imgListName, editedText, setEditedText }) => {
   );
 };
 
-export default Stage21ImageView;
+export default Stage22TaskView;

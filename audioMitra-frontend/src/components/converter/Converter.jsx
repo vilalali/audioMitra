@@ -1,13 +1,14 @@
-import { useState, useContext } from "react";
-import Stage11UploadImage from "./Stage11UploadImage.jsx";
-import Stage22TextView from "./Stage22TextView.jsx";
+import { useState } from "react";
+import axios from "axios";
+
+import Stage1Converter from "./Stage1Converter";
+import Stage22TaskView from "./Stage22TaskView";
+import Stage21TextView from "./Stage21TextView";
 import Stage3AudioPlayer from "./Stage3AudioPlayer";
 
-import axios from "axios";
-import { GlobalContext } from "../context/GlobalContext";
+import { API_URL } from "../../cred";
 
 const Converter = () => {
-  const { API_URL } = useContext(GlobalContext);
   const [imgListName, setImgListName] = useState([]);
   const [textStatus, setTextStatus] = useState(false);
   const [editedText, setEditedText] = useState("");
@@ -44,7 +45,13 @@ const Converter = () => {
 
   return (
     <>
-      <Stage11UploadImage setImgListName={setImgListName} setTextStatus={setTextStatus} />
+      {/* Stage1 Component Start  */}
+      <Stage1Converter
+        setImgListName={setImgListName}
+        setTextStatus={setTextStatus}
+      />
+
+      {/* Stage2 Component Start  */}
       <div className="container flex flex-wrap mt-5 border-t-2 border-orange-200">
         <h1 className="text-3xl text-center h-10 rounded-full text-slate-800 bg-orange-200 font-bold border border-orange-200 -ml-5 w-10 border-t-0">
           2
@@ -54,11 +61,14 @@ const Converter = () => {
       {textStatus === "True" ? (
         <div>
           <div className="w-[500px] mx-auto text-center">
-            <Stage22TextView editedText={editedText} setEditedText={setEditedText} />
+            <Stage21TextView
+              editedText={editedText}
+              setEditedText={setEditedText}
+            />
           </div>
         </div>
       ) : (
-        <Stage22TextView
+        <Stage22TaskView
           imgListName={imgListName}
           editedText={editedText}
           setEditedText={setEditedText}

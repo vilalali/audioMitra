@@ -1,6 +1,6 @@
 import { TTSEngineName } from "./configConstants";
 
-const EngineTTS = ({ selectTTSEngine, handleTTSEngineChange }) => {
+const TTSEngine = ({ selectTTSEngine, handleTTSEngineChange }) => {
   return (
     <>
       <div>
@@ -26,4 +26,4 @@ const EngineTTS = ({ selectTTSEngine, handleTTSEngineChange }) => {
   );
 };
 
-export default EngineTTS;
+export default TTSEngine;

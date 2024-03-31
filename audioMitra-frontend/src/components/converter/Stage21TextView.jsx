@@ -1,11 +1,11 @@
 import React, { useRef, useEffect } from "react";
 
-const Stage22TextView = ({ setEditedText, editedText }) => {
+const Stage21TextView = ({ setEditedText, editedText }) => {
   const textareaRef = useRef(null);
 
   useEffect(() => {
     if (textareaRef.current) {
-      textareaRef.current.style.height = "auto"; // Reset the height first
+      textareaRef.current.style.height = "auto";
       textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
     }
   }, [editedText]);
@@ -26,4 +26,4 @@ const Stage22TextView = ({ setEditedText, editedText }) => {
   );
 };
 
-export default Stage22TextView;
+export default Stage21TextView;
