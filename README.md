@@ -111,6 +111,8 @@ AudioMitra utilizes OCR and TTS to convert content into various formats, enhanci
         ```
     3. Install the Python packages:
         ```bash
+        sudo apt-get install ffmpeg
+        sudo apt install tesseract-ocr
         pip install -r audioMitraRequirement.txt
         ```
         ```bash
