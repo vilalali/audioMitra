@@ -76,7 +76,6 @@ AudioMitra utilizes OCR and TTS to convert content into various formats, enhanci
     3. Update the `cred.js`  inside the root directory `audioMitra-frontend/src/creds.js` with contents:
         ```bash
         #cred.js
-        For Node.js
         //API base URL
         const API_URL = 'http://10.1.65.64:8002';
 
@@ -85,11 +84,6 @@ AudioMitra utilizes OCR and TTS to convert content into various formats, enhanci
 
         // Alternatively, export it as a default export
         // export default API_URL;
-        
-        # For Python
-        // API_URL = "http://<Your_Backend_IP_Address>:8002"
-        #Example
-        API_URL = "http://10.1.64.65:8002"*
         ```
     4. Start the frontend Server:
         ```bash
