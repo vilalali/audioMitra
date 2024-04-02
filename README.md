@@ -77,16 +77,15 @@ AudioMitra utilizes OCR and TTS to convert content into various formats, enhanci
         ```bash
         #cred.js
         For Node.js
-        const creds = {
-            // backendUrl: 'http://10.1.64.65:8002',
-            // staticUrl: "http://localhost:8002",
-            // backendUrl: 'http://10.1.64.65/api:3001',
-            // staticUrl: "http://localhost:3001",
-            // staticUrl: "http://localhost:3001",
-            // staticUrl: ""
-        };
-        export const url = creds.backendUrl;
-        export default creds;
+        //API base URL
+        const API_URL = 'http://10.1.65.64:8002';
+
+        // Export the API_URL
+        export { API_URL };
+
+        // Alternatively, export it as a default export
+        // export default API_URL;
+        
         # For Python
         // API_URL = "http://<Your_Backend_IP_Address>:8002"
         #Example
