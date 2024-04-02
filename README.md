@@ -195,6 +195,11 @@ AudioMitra utilizes OCR and TTS to convert content into various formats, enhanci
                 PRIMARY KEY (ocrID)
             );
             ```
+---
+## Project Demo:
+https://github.com/vilalali/audioMitra/assets/46487934/21d6551f-d552-4be8-9e2d-c41496bedf24
+
+
 
 ---
 ---
