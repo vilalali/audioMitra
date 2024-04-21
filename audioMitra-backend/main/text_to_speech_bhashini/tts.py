@@ -102,4 +102,3 @@ if __name__=="__main__":
     sLang = sys.argv[2]
     oFile = sys.argv[3]
     main_tts_bhashini(stxt, sLang, oFile)
-
