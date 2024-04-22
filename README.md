@@ -89,7 +89,7 @@ AudioMitra utilizes OCR and TTS to convert content into various formats, enhanci
         ```bash
         npm start
         ```
-    5. Now Open [http://localhost:3000](http://localhost:3000) in your browser.
+    5. Now Open [http://localhost:8002/api/home](http://localhost:8002/api/home) in your browser.
 ---
 3. **Backend Setup for Python :**
     1.  Ensure you're in the `audioMitra-backend` directory before executing the following commands:

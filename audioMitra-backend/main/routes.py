@@ -13,7 +13,7 @@ log = logging.getLogger()
 
 @app.route('/api/home', methods=['GET', 'POST', 'OPTIONS'])
 def home():
-    return ({"message": "api data accessed without db..."})
+    return ({"message": "Hello, your backend is running successfully."})
 
 @app.route('/api/upload', methods=['POST', 'OPTIONS'])
 def upload():
