@@ -1,4 +1,4 @@
-# AudioMitra
+![hPA_IiH04CRxVOhXAaNo0eV5IMoi51FinyqO1_TFc9q4HU_TlMIHGv8SLzmMKsI-tmy-ChkaADfxPvJL4Tpr3KVFAWZLLrBoK43fC2MuPsm5lJ4TsWzi2JQpx0Q-3HmUlYOLj0esaz7sde8-IRIKKfGSczuDTFdhN-ZgUjhjfpcDBAdfKoyYUl3OqaLCZ-LpHJAmfVyqoLiKVzYkTgch](https://github.com/vilalali/audioMitra/assets/46487934/0c41019a-14fd-4b3f-8507-c7798e4427ce)# AudioMitra
 **Author**: Team_11 (Vilal, Shriom, Madan, Hanuma)
 
 ## 1. Introduction:
@@ -148,53 +148,7 @@ AudioMitra utilizes OCR and TTS to convert content into various formats, enhanci
         Hello, your backend is running successfully.
         ```
 ---
-4. **Backend Setup for NodeJs :**
-    1. Ensure you're in the `audioMitra-backend` directory before executing the following commands:
-        ```bash
-        cd audioMitra/audioMitra-backend
-        ```
-    2. Install NodeJs Packages:
-        ```bash
-        npm install --no-lockfile
-        ```
-    3. Start backend Server:
-        ```bash
-        npm nodemon start
-        or
-        npm run run
-        or
-        npm run-script run
-        ```
-5. **Database Configuration:**
-    1. Install the `mysql` and create the user and database.
-    2. Create a `.env` file on root directory `audioMitra-backend/.env` with contents:
-        ```bash
-        SQL_HOST="localhost"
-        SQL_USER="audioMitra"
-        SQL_PASSWORD="password"
-        SQL_DATABASE="audioMitraData"
-        ```
-    3. Database Schema
-        - User: Users are stored in this table.
-        - Ocr: Extracted text stored in this table
-        - Translation: Translation of extracted text stored in this table.
-        - Speech: Converted text to speech ASR stored in this table.
-        - User
-            ```bash
-            CREATE TABLE User(
-                timeStamp varchar(255),
-                userID varchar(255),
-                PRIMARY KEY (userID)
-            );
-            ```
-        - Ocr
-            ```bash
-            CREATE TABLE User(
-                ocrTimeStamp varchar(255),
-                ocrID varchar(255),
-                PRIMARY KEY (ocrID)
-            );
-            ```
+*Ideally, this configuration smoothly functions on any Linux system. For Windows, ensure that you have installed these packages properly.*
 ---
 ## Project Demo:
 https://github.com/vilalali/audioMitra/assets/46487934/21d6551f-d552-4be8-9e2d-c41496bedf24
@@ -203,4 +157,4 @@ https://github.com/vilalali/audioMitra/assets/46487934/21d6551f-d552-4be8-9e2d-c
 
 ---
 ---
-Author [Vilal Ali](https://www.linkedin.com/in/vilal-ali/)
+Author [Vilal Ali and Team_11](https://www.linkedin.com/in/vilal-ali/)
