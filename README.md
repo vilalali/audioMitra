@@ -197,7 +197,8 @@ AudioMitra utilizes OCR and TTS to convert content into various formats, enhanci
             ```
 ---
 ## Project Demo:
-https://github.com/vilalali/audioMitra/assets/46487934/21d6551f-d552-4be8-9e2d-c41496bedf24
+
+https://github.com/vilalali/audioMitra/assets/46487934/35b7d318-86fe-40f4-bce3-bde9f449e82f
 
 
 
