@@ -1,115 +1,165 @@
-# AudioMitra
-**Author**: Team_11 (Vilal, Shriom, Madan, Hanuma)
+# AudioMitra: AI-Powered Document & Content Transformation
 
-## 1. Introduction:
-AudioMitra is a document and content transformation platform to provide authentic and trustworthy transformations using the computational power of artificial intelligence and cognitive power of human in the loop.
+[![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![Flask](https://img.shields.io/badge/Flask-2.x-000000.svg?logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
+[![Node.js](https://img.shields.io/badge/Node.js-18.x%2B-339933.svg?logo=node.js&logoColor=white)](https://nodejs.org/)
+[![React](https://img.shields.io/badge/React-18.x-61DAFB.svg?logo=react&logoColor=white)](https://react.dev/)
+[![MySQL](https://img.shields.io/badge/MySQL-8.0%2B-4479A1.svg?logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-4.0%2B-47A248.svg?logo=mongodb&logoColor=white)](https://www.mongodb.com/)
+[![Tesseract OCR](https://img.shields.io/badge/Tesseract_OCR-5.x-F4B300.svg?logo=tesseract&logoColor=white)](https://tesseract-ocr.github.io/)
+[![Google Cloud TTS](https://img.shields.io/badge/Google_Cloud_TTS-API-4285F4.svg?logo=google-cloud&logoColor=white)](https://cloud.google.com/text-to-speech)
 
-## 2. Problem Statement:
-**Description – AudioMitra:**
-AudioMitra stands as an innovative solution within the realm of language processing, aiming to streamline human endeavors through technological advancement. Functioning as a document and content transformation system, AudioMitra facilitates the transition from digital images into text through Optical Character Recognition (OCR), and then converting text into audio using a text-to-speech (TTS) system.
+**Author**: Vilal Ali
+## 1. Introduction
 
-Throughout the transformation process, AudioMitra allows for the optional collaboration between human intervention and machine operation. This collaborative approach ensures the authenticity and reliability of the transformations performed. The degree of human and machine involvement is tailored to meet specific workflow requirements, with the balance dictated by the desired level of accuracy and the nature of the transformations needed.
+AudioMitra is an innovative platform designed for **document and content transformation**, providing **authentic and trustworthy conversions** by leveraging the computational power of **Artificial Intelligence** and the cognitive abilities of **human-in-the-loop validation**. It aims to streamline language processing tasks, enhancing accessibility and efficiency.
 
-**This includes:**
-- Optical Character Recognition (OCR): Extracting text from digital images or scanned documents to create editable text files.
-- Text-to-Speech (TTS) Conversion: Transforming text content into audio formats, enabling the creation of audiobooks in various languages.
+## 2. Problem Statement
 
-**Stakeholders:**
-The primary users of AudioMitra are individuals and organizations that require the conversion of documents and content into different formats for various purposes. Schools, colleges, and universities that need to digitize textbooks, lecture notes, and other educational materials for online access in different formats.
+Many individuals and organizations require efficient and accurate conversion of documents and content into various formats. Traditional methods are often time-consuming, prone to errors, and lack the flexibility for diverse output needs. Specifically, there's a need for:
+
+*   **Reliable Text Extraction**: Converting digital images or scanned documents into editable text files using **Optical Character Recognition (OCR)**.
+*   **Accessible Audio Content**: Transforming text into audio formats through **Text-to-Speech (TTS) conversion**, enabling the creation of audiobooks or accessible versions of content.
+*   **Quality Assurance**: Ensuring the authenticity and reliability of these transformations, often requiring a blend of automated and human validation.
+
+AudioMitra addresses these challenges by offering a flexible solution that adapts human and machine involvement based on the required accuracy and nature of the transformations.
+
+### Stakeholders
+
+The primary users include:
+*   **Educational Institutions (Schools, Colleges, Universities)**: For digitizing textbooks, lecture notes, and other educational materials into various accessible formats.
+*   **Libraries**: For converting physical books into digital text and audio formats.
+*   **Content Creators**: For generating audio versions of their written content.
+*   **Individuals with Accessibility Needs**: Requiring text and audio formats of documents.
 
 ## 3. Abstract Overview of the Proposed Solution
-The proposed solution offers a comprehensive approach to text extraction, content validation, and text-to-speech/audio conversion. Leveraging open-source APIs for OCR and TTS, it ensures flexibility and scalability. Text extraction from images is facilitated through an Open-Source API, with options for using other OCR APIs. The system validates OCR'd content for accuracy, allowing human intervention for editing and refinement if necessary.
 
-Output includes validated text content and audio files generated from the extracted and validated text. Accessible via web browsers with user authentication, the multiuser system supports various roles like validators, authors, and voice-over contributors, ensuring accessibility, flexibility, and collaborative efficiency in document transformation processes.
+AudioMitra provides a comprehensive solution for **text extraction, content validation, and text-to-speech/audio conversion**. The system leverages **open-source APIs** for both OCR and TTS, ensuring flexibility and scalability while offering options to integrate other advanced APIs.
 
-## 4. Technology Stack Overview for AudioMitra
-**Backend:** Flask (Python), Node.js, MySQL, MongoDB, OCR and TTS
-**Frontend:** React Framework, Bootstrap and Tailwind
+Key aspects of the solution include:
+*   **Text Extraction**: Utilizes an **Open-Source OCR API** (with options for others) to accurately convert text from images.
+*   **Content Validation**: OCR'd content undergoes a validation process, allowing for **human intervention** to edit and refine text, ensuring high accuracy.
+*   **Output Formats**: Generates both **validated text content** and high-quality **audio files** from the refined text.
+*   **Web Accessibility & Multi-user System**: Accessible via web browsers with **user authentication**, supporting various roles such as **validators, authors, and voice-over contributors**, promoting collaborative efficiency and accessibility.
 
-## 5. Project Domain:
-The domain of the AudioMitra project can be best categorized under Education. This classification is based on the project's focus on transforming documents and content from Image to Text and Text Speech, specifically aiming to enhance the learning experiences and accessibility of educational materials.
+## 4. Technology Stack
+
+*   **Backend**: Flask (Python), Node.js, MySQL, MongoDB, Tesseract OCR, Google Cloud TTS (or other open-source TTS APIs)
+*   **Frontend**: React Framework, Bootstrap, Tailwind CSS
+*   **Orchestration/Architecture**: Microservices, API Gateway, Event-Driven Architecture, Security Best Practices.
+*   **Design Patterns**: Factory Pattern, Observer Pattern, Singleton Pattern.
+
+## 5. Project Domain
+
+AudioMitra is primarily categorized under the **Education** domain. Its core focus is on transforming educational documents and content from image to text and then to speech, directly enhancing learning experiences and the accessibility of educational materials. This also extends to **Digital Libraries** and **Content Accessibility** initiatives.
 
 ## 6. Key Functionalities
-**Core Features:**
-- Image to Text Transformation: Utilizes the Open-Source API for OCR, converting images into editable text.
-- Text Editing and Review: Provides tools for text editing and review, ensuring the accuracy of the extracted text.
-- Text to Audio Transformation: Converts text into audio format using the Open-Source API, facilitating the creation of audiobooks.
-- Browser-Based Access: Users interact with the system through a web interface, providing a user-friendly and accessible platform for document conversion. Support for various roles, including validators, authors, and voice-over artists.
 
-**Architectural Tactics:**
-- Microservices Architecture, API Gateway, Event-Driven Architecture, Security
+### Core Features
+*   **Image to Text Transformation**: Utilizes an Open-Source API for **OCR**, converting images into editable text.
+*   **Text Editing and Review**: Provides robust tools for **text editing and human review**, ensuring the accuracy and quality of the extracted text.
+*   **Text to Audio Transformation**: Converts validated text into audio format using an **Open-Source/Cloud TTS API**, facilitating the creation of audiobooks and accessible content.
+*   **Browser-Based Access**: Offers a user-friendly and accessible **web interface** for document conversion.
+*   **Role-Based Access Control**: Supports various user roles, including **validators, authors, and voice-over artists**, enabling collaborative workflows.
 
-**Design Patterns:**
-- In this project, the Factory Pattern creates diverse objects seamlessly, the Observer Pattern tracks state changes efficiently, and the Singleton Pattern ensures singular resource instances, collectively enhancing flexibility and reliability.
+### Architectural Tactics
+*   **Microservices Architecture**: For modularity, scalability, and independent deployment of services.
+*   **API Gateway**: Centralized entry point for managing and securing API requests.
+*   **Event-Driven Architecture**: For asynchronous communication and responsiveness between services.
+*   **Security**: Implementing authentication, authorization, and data encryption.
+
+### Design Patterns
+*   **Factory Pattern**: To create diverse objects seamlessly (e.g., different OCR or TTS service instances).
+*   **Observer Pattern**: To efficiently track state changes (e.g., document status updates during validation).
+*   **Singleton Pattern**: To ensure singular instances of critical resources (e.g., database connections).
 
 ## 7. Expected Time to Build a Prototype
-**Project's complexity and the need to develop a working prototype of the AudioMitra system, a realistic timeline can be outlined as follows. This timeline assumes a team of 4 members, with each member potentially taking on multiple roles to ensure the project's success.**
-- Research and Planning (1 week)
-- Design (2 weeks)
-- Development (4 weeks)
-- Testing (1 week)
-- Refinement (1 week)
-**Total Estimated Time: 9 weeks**
+
+This timeline assumes a dedicated team of 4 members, with each member potentially taking on multiple roles to ensure the project's success.
+
+*   **Research and Planning**: 1 week
+*   **Design**: 2 weeks
+*   **Development**: 4 weeks
+*   **Testing**: 1 week
+*   **Refinement**: 1 week
+*   **Total Estimated Time**: 9 weeks
 
 ## 8. Conclusion
-AudioMitra utilizes OCR and TTS to convert content into various formats, enhancing accessibility and efficiency. Its multilingual support and collaborative approach ensure transformation authenticity and reliability. With a robust tech stack, it's set to impact education, libraries, and content creation, advancing global knowledge dissemination.
 
----
----
+AudioMitra stands as a powerful platform poised to revolutionize content accessibility and management. By ingeniously combining **OCR and TTS technologies** with **human-in-the-loop validation**, it ensures that content transformations are not only efficient but also highly authentic and reliable. Its support for multilingual content and a collaborative multi-user environment makes it an invaluable tool for enhancing educational resources, enriching digital libraries, and advancing global knowledge dissemination. With its robust **MERN-like tech stack** and thoughtful architectural design, AudioMitra is set to significantly impact how we interact with and consume information.
+
 ---
 
 ## 9. Project Configuration
-1. **Clone the directory from the given link:**
+
+Follow these steps to set up and run the AudioMitra application locally.
+
+### Prerequisites
+
+Ensure you have the following installed on your development machine:
+
+*   **Node.js** (LTS version recommended, v18.x or higher) - Download from [nodejs.org](https://nodejs.org/).
+*   **npm** (comes with Node.js)
+*   **Python 3.9+** - Download from [python.org](https://www.python.org/downloads/).
+*   **`virtualenv`**: `sudo apt install python3-virtualenv` (or `pip install virtualenv`)
+*   **`ffmpeg`**: `sudo apt install ffmpeg` (required for audio processing)
+*   **`tesseract-ocr`**: `sudo apt install tesseract-ocr` (required for OCR functionality)
+*   **MySQL Server**: Install and configure locally (refer to [MySQL Installation Guide](https://dev.mysql.com/doc/refman/8.0/en/installing.html)).
+*   **MongoDB Server** (Optional, for future use/alternative data storage; currently MySQL is defined)
+
+### 1. Clone the Repository
+
+Start by cloning the AudioMitra repository to your local machine:
+```bash
+git clone https://github.com/vilalali/audioMitra.git
+cd audioMitra
+```
+
+### 2. Frontend Setup (React.js)
+
+The frontend provides the user interface for document and content transformation.
+
+1.  **Navigate to the frontend directory**:
     ```bash
-    git clone https://github.com/vilalali/audioMitra.git
+    cd audioMitra-frontend
     ```
----
-2. **Frontend Setup:**
-    1. Ensure you're in the `audioMitra-frontend` directory before executing the following commands:
-        ```bash
-        cd audioMitra/audioMitra-frontend
-        ```
-    2. Installed the `NodeJs` packages using npm:
-        ```bash
-        npm install --no-lockfile
-        ```
-    3. Update the `cred.js`  inside the root directory `audioMitra-frontend/src/creds.js` with contents:
-        ```bash
-        #cred.js
-        //API base URL
-        const API_URL = 'http://10.1.65.64:8002';
-
-        // Export the API_URL
+2.  **Install Node.js Packages**:
+    ```bash
+    npm install --no-lockfile
+    ```
+3.  **Update API Base URL**:
+    *   Edit the `cred.js` file located at `audioMitra-frontend/src/creds.js`.
+    *   Set `API_URL` to point to your Node.js backend server. **Important**: If running on the same machine, use `http://localhost:port` or your machine's local IP address.
+        ```javascript
+        // audioMitra-frontend/src/creds.js
+        const API_URL = 'http://localhost:8002'; // Ensure this matches your Node.js backend port
         export { API_URL };
+        ```
+4.  **Start the Frontend Server**:
+    ```bash
+    npm start
+    ```
+    The frontend should now be running, typically accessible at `http://localhost:3000` (check your console for the exact port if different).
 
-        // Alternatively, export it as a default export
-        // export default API_URL;
+### 3. Backend Setup for Python (Flask)
+
+The Python backend handles OCR and TTS processing.
+
+1.  **Navigate to the Python backend directory**:
+    ```bash
+    cd ../audioMitra-backend
+    ```
+2.  **Establish Python Virtual Environment**:
+    ```bash
+    python3 -m venv audioMitraVenv
+    source audioMitraVenv/bin/activate
+    ```
+3.  **Install Python Packages**:
+    ```bash
+    pip install -r audioMitraRequirement.txt
+    ```
+    *   **`audioMitraRequirement.txt` content:**
         ```
-    4. Start the frontend Server:
-        ```bash
-        npm start
-        ```
-    5. Now Open [http://localhost:8002/api/home](http://localhost:8002/api/home) in your browser.
----
-3. **Backend Setup for Python :**
-    1.  Ensure you're in the `audioMitra-backend` directory before executing the following commands:
-        ```bash
-        cd audioMitra/audioMitra-backend
-        ```
-    2. Establishing Python Virtual Environment:
-        ```bash
-        sudo apt install python3-virtualenv
-        python3 -m venv audioMitraVenv
-        source audioMitraVenv/bin/activate
-        ```
-    3. Install the Python packages:
-        ```bash
-        sudo apt-get install ffmpeg
-        sudo apt install tesseract-ocr
-        pip install -r audioMitraRequirement.txt
-        ```
-        ```bash
-        //audioMitraRequirement.txt
         blinker==1.7.0
         certifi==2024.2.2
         cffi==1.16.0
@@ -135,73 +185,121 @@ AudioMitra utilizes OCR and TTS to convert content into various formats, enhanci
         urllib3==2.2.1
         Werkzeug==3.0.1
         ```
-    4. Start backend server:
-        ```bash
-        python3 app.py
+4.  **Start Python Backend Server**:
+    ```bash
+    python3 app.py
+    ```
+5.  **Test the Python API**:
+    *   Open your web browser and navigate to: `http://localhost:5000/home` (assuming Flask runs on port 5000).
+    *   **Expected Output**: `Hello, your backend is running successfully.`
+
+### 4. Backend Setup for Node.js
+
+The Node.js backend likely serves as an API Gateway or handles specific services.
+
+1.  **Ensure you're in the `audioMitra-backend` directory**:
+    ```bash
+    # If you're still in the Python venv, deactivate it first:
+    # deactivate
+    cd ../audioMitra-backend # Or ensure you are in the directory containing package.json for Node.js
+    ```
+2.  **Install Node.js Packages**:
+    ```bash
+    npm install --no-lockfile
+    ```
+3.  **Start Node.js Backend Server**:
+    ```bash
+    npm run start
+    # or if 'start' script uses nodemon:
+    # npm start
+    # or you might have a custom script like:
+    # npm run run
+    # or
+    # npm run-script run
+    ```
+    Ensure this server is running on the port specified in your `audioMitra-frontend/src/creds.js` (e.g., `8002`).
+
+### 5. Database Configuration (MySQL)
+
+AudioMitra uses MySQL for user and content data storage.
+
+1.  **Install MySQL** if you haven't already.
+2.  **Create a MySQL user and database**:
+    ```sql
+    CREATE USER 'audioMitra'@'localhost' IDENTIFIED BY 'password';
+    CREATE DATABASE audioMitraData;
+    GRANT ALL PRIVILEGES ON audioMitraData.* TO 'audioMitra'@'localhost';
+    FLUSH PRIVILEGES;
+    ```
+    *(Adjust username, password, and host as needed for your setup.)*
+3.  **Create a `.env` file** in the root directory of your Node.js backend (`audioMitra-backend/.env`) with your MySQL credentials:
+    ```
+    # audioMitra-backend/.env
+    SQL_HOST="localhost"
+    SQL_USER="audioMitra"
+    SQL_PASSWORD="password"
+    SQL_DATABASE="audioMitraData"
+    ```
+4.  **Database Schema**:
+    *   You'll need to create the tables in the `audioMitraData` database.
+    *   **User Table**: Stores user authentication and profile information.
+        ```sql
+        CREATE TABLE User (
+            timeStamp VARCHAR(255) NOT NULL,
+            userID VARCHAR(255) PRIMARY KEY,
+            -- Add other user fields like username, password_hash, email, role, etc.
+            username VARCHAR(255) UNIQUE,
+            password_hash VARCHAR(255),
+            email VARCHAR(255)
+        );
         ```
-    5. Test the API by navigating to the following URL in your web browser:
-        ```bash 
-        http://localhost:5000/home
+    *   **Ocr Table**: Stores details of extracted text content.
+        ```sql
+        CREATE TABLE Ocr (
+            ocrTimeStamp VARCHAR(255) NOT NULL,
+            ocrID VARCHAR(255) PRIMARY KEY,
+            userID VARCHAR(255), -- Foreign key to User
+            originalImagePath VARCHAR(255),
+            extractedText TEXT,
+            status VARCHAR(50), -- e.g., 'pending_validation', 'validated'
+            FOREIGN KEY (userID) REFERENCES User(userID)
+        );
         ```
-        Output:
-        ```bash
-        Hello, your backend is running successfully.
+    *   **Translation Table** (If translation is implemented):
+        ```sql
+        CREATE TABLE Translation (
+            translationTimeStamp VARCHAR(255) NOT NULL,
+            translationID VARCHAR(255) PRIMARY KEY,
+            ocrID VARCHAR(255), -- Foreign key to Ocr
+            targetLanguage VARCHAR(50),
+            translatedText TEXT,
+            status VARCHAR(50), -- e.g., 'pending_review', 'reviewed'
+            FOREIGN KEY (ocrID) REFERENCES Ocr(ocrID)
+        );
         ```
----
-4. **Backend Setup for NodeJs :**
-    1. Ensure you're in the `audioMitra-backend` directory before executing the following commands:
-        ```bash
-        cd audioMitra/audioMitra-backend
+    *   **Speech Table** (If TTS is implemented):
+        ```sql
+        CREATE TABLE Speech (
+            speechTimeStamp VARCHAR(255) NOT NULL,
+            speechID VARCHAR(255) PRIMARY KEY,
+            contentID VARCHAR(255), -- Could link to Ocr or Translation
+            sourceText TEXT,
+            audioFilePath VARCHAR(255),
+            language VARCHAR(50),
+            voiceType VARCHAR(50),
+            FOREIGN KEY (contentID) REFERENCES Ocr(ocrID) -- Or Translation(translationID)
+        );
         ```
-    2. Install NodeJs Packages:
-        ```bash
-        npm install --no-lockfile
-        ```
-    3. Start backend Server:
-        ```bash
-        npm nodemon start
-        or
-        npm run run
-        or
-        npm run-script run
-        ```
-5. **Database Configuration:**
-    1. Install the `mysql` and create the user and database.
-    2. Create a `.env` file on root directory `audioMitra-backend/.env` with contents:
-        ```bash
-        SQL_HOST="localhost"
-        SQL_USER="audioMitra"
-        SQL_PASSWORD="password"
-        SQL_DATABASE="audioMitraData"
-        ```
-    3. Database Schema
-        - User: Users are stored in this table.
-        - Ocr: Extracted text stored in this table
-        - Translation: Translation of extracted text stored in this table.
-        - Speech: Converted text to speech ASR stored in this table.
-        - User
-            ```bash
-            CREATE TABLE User(
-                timeStamp varchar(255),
-                userID varchar(255),
-                PRIMARY KEY (userID)
-            );
-            ```
-        - Ocr
-            ```bash
-            CREATE TABLE User(
-                ocrTimeStamp varchar(255),
-                ocrID varchar(255),
-                PRIMARY KEY (ocrID)
-            );
-            ```
+
 ---
 ## Project Demo:
 
 https://github.com/vilalali/audioMitra/assets/46487934/35b7d318-86fe-40f4-bce3-bde9f449e82f
 
-
-
 ---
+
+## Author
+**Vilal Ali**  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-0077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vilal-ali/)
 ---
-Author [Vilal Ali](https://www.linkedin.com/in/vilal-ali/)
+
