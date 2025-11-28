@@ -226,7 +226,7 @@ AudioMitra uses MySQL for user and content data storage.
 1.  **Install MySQL** if you haven't already.
 2.  **Create a MySQL user and database**:
     ```sql
-    CREATE USER 'audioMitra'@'localhost' IDENTIFIED BY 'password';
+    CREATE USER 'audioMitra'@'localhost' IDENTIFIED BY 'XXXX';
     CREATE DATABASE audioMitraData;
     GRANT ALL PRIVILEGES ON audioMitraData.* TO 'audioMitra'@'localhost';
     FLUSH PRIVILEGES;
