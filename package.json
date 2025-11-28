@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "node-forge": "1.3.2"
+  },
+  "devDependencies": {
+    "npm-force-resolutions": "^0.0.10"
+  }
+}
